@@ -88,6 +88,12 @@ figcaption .post-link{margin-top:4px;font-size:.75rem;letter-spacing:.06em;color
 figcaption .post-link:hover{opacity:1}
 figcaption strong{font-family:var(--serif);font-weight:500;font-size:1.15rem;color:var(--text)}
 
+/* BRAND ADS */
+.brands .frame{box-shadow:0 0 28px rgba(233,185,73,.08)}
+.brands .tag{z-index:1;pointer-events:none}
+.brands figcaption strong{letter-spacing:.08em}
+.brands .slogan{font-family:var(--serif);font-style:italic;color:var(--gold-soft);font-size:1rem}
+
 /* PRICING */
 .prices{display:grid;gap:16px}
 .price{position:relative;padding:32px 28px;border-radius:var(--r);border:1px solid var(--line);
