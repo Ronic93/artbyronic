@@ -94,6 +94,20 @@ figcaption strong{font-family:var(--serif);font-weight:500;font-size:1.15rem;col
 .brands figcaption strong{letter-spacing:.08em}
 .brands .slogan{font-family:var(--serif);font-style:italic;color:var(--gold-soft);font-size:1rem}
 
+/* MUSIC VIDEOS */
+.music{position:relative;isolation:isolate}
+.music::before{content:'';position:absolute;inset:24px 0;z-index:-1;border-radius:28px;
+  background:radial-gradient(700px 400px at 50% 0%,rgba(74,36,120,.45),transparent 70%)}
+.music .tag{z-index:1;pointer-events:none}
+.music .frame{box-shadow:0 0 28px rgba(74,36,120,.35)}
+
+/* MORE WORK CTA */
+.more-work{text-align:center;padding-top:64px;padding-bottom:64px}
+.more-work h2{font-size:clamp(1.6rem,5vw,2.3rem)}
+.more-work .muted{margin-bottom:28px}
+.cta-center{flex-direction:row;justify-content:center;flex-wrap:wrap}
+.cta-center .btn{min-width:150px}
+
 /* PRICING */
 .prices{display:grid;gap:16px}
 .price{position:relative;padding:32px 28px;border-radius:var(--r);border:1px solid var(--line);
@@ -143,5 +157,7 @@ figcaption strong{font-family:var(--serif);font-weight:500;font-size:1.15rem;col
   .prices{grid-template-columns:repeat(4,1fr)}
   .steps{grid-template-columns:repeat(3,1fr)}
   .section{padding:120px var(--pad)}
+  .more-work{padding-top:80px;padding-bottom:80px}
+  .cta-row.cta-center{justify-content:center}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important;animation:none!important}}
