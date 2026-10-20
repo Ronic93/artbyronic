@@ -3,18 +3,24 @@
   // Language toggle (NL default, EN via data-en)
   var nodes = document.querySelectorAll('[data-en]');
   nodes.forEach(function (el) { el.dataset.nl = el.innerHTML; });
+  // Links with a language-specific href (e.g. mailto subject)
+  var hrefs = document.querySelectorAll('[data-en-href]');
+  hrefs.forEach(function (el) { el.dataset.nlHref = el.getAttribute('href'); });
   var btn = document.getElementById('lang');
   var spans = btn.querySelectorAll('span');
   function setLang(l) {
     nodes.forEach(function (el) { el.innerHTML = l === 'en' ? el.dataset.en : el.dataset.nl; });
+    hrefs.forEach(function (el) { el.setAttribute('href', l === 'en' ? el.dataset.enHref : el.dataset.nlHref); });
     document.documentElement.lang = l;
     spans[0].classList.toggle('on', l === 'nl');
     spans[1].classList.toggle('on', l === 'en');
     try { localStorage.setItem('abr-lang', l); } catch (e) {}
   }
   var saved = null;
+  // ?lang=en forces English (handy for sharing with US/CA/UK clients)
+  var q = (location.search.match(/[?&]lang=(nl|en)/) || [])[1];
   try { saved = localStorage.getItem('abr-lang'); } catch (e) {}
-  if (saved === 'en') setLang('en');
+  if (q) setLang(q); else if (saved === 'en') setLang('en');
   btn.addEventListener('click', function () { setLang(document.documentElement.lang === 'en' ? 'nl' : 'en'); });
 
   // Lazy-load work videos, play muted only while visible

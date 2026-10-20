@@ -117,9 +117,41 @@ figcaption strong{font-family:var(--serif);font-weight:500;font-size:1.15rem;col
 .amount small{font-family:var(--sans);font-size:.8rem;color:var(--muted);letter-spacing:.06em}
 .price p:last-child{color:var(--muted);font-size:.95rem}
 .price.featured{border-color:rgba(233,185,73,.55);box-shadow:0 0 50px rgba(233,185,73,.1)}
+.per-clip{display:inline-block;margin:-4px 0 12px;font:500 .72rem var(--sans);letter-spacing:.08em;color:var(--gold-soft);
+  border:1px solid rgba(233,185,73,.45);border-radius:999px;padding:4px 10px}
 .badge{position:absolute;top:-11px;right:20px;font:600 .65rem var(--sans);letter-spacing:.14em;text-transform:uppercase;
   background:var(--gold);color:#1a0e05;padding:5px 10px;border-radius:999px}
 .note{text-align:center;margin-top:32px;color:var(--gold-soft);font-family:var(--serif);font-style:italic;font-size:1.15rem}
+
+/* USP */
+.usps{display:grid;gap:16px;max-width:1080px;margin:0 auto}
+.usp-item{padding:28px 24px;border-radius:var(--r);border:1px solid var(--line);text-align:center;
+  background:linear-gradient(180deg,rgba(42,19,71,.55),rgba(22,11,38,.55))}
+.usp-item:first-child,.usp-item:nth-child(2){border-color:rgba(233,185,73,.45);box-shadow:0 0 40px rgba(233,185,73,.08)}
+.usp-icon{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:999px;margin-bottom:12px;
+  border:1px solid rgba(233,185,73,.5);color:var(--gold);font-size:1.15rem}
+.usp-item h3{font-size:1.45rem;margin-bottom:6px}
+.usp-item p{color:var(--muted);font-size:.95rem;max-width:36ch;margin:0 auto}
+
+/* PRICING FACTS */
+.facts{list-style:none;display:grid;gap:10px;max-width:640px;margin:28px auto 0;font-size:.92rem;color:var(--muted)}
+.facts li{padding:12px 16px;border:1px solid var(--line);border-radius:12px;background:rgba(22,11,38,.5)}
+.facts strong,.terms dt{color:var(--gold-soft);font-weight:500;letter-spacing:.04em}
+.facts strong{display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.18em;margin-bottom:2px}
+.note-small{text-align:center;margin:22px auto 0;color:var(--muted);font-size:.85rem;max-width:56ch}
+
+/* LEGAL: usage rights + terms */
+.legal{padding-top:72px;padding-bottom:72px}
+.legal-list{list-style:none;display:grid;gap:12px;max-width:720px;margin:0 auto}
+.legal-list li{position:relative;padding:14px 16px 14px 44px;border:1px solid var(--line);border-radius:12px;
+  background:rgba(22,11,38,.5);color:var(--text);font-size:.95rem}
+.legal-list li::before{content:'✓';position:absolute;left:16px;top:14px;color:var(--gold)}
+.terms{display:grid;gap:12px;max-width:720px;margin:0 auto}
+.terms div{padding:16px 18px;border:1px solid var(--line);border-radius:12px;background:rgba(22,11,38,.5)}
+.terms dt{font-family:var(--serif);font-size:1.25rem;margin-bottom:4px}
+.terms dd{color:var(--muted);font-size:.93rem}
+.footer-links{margin-top:8px}
+.footer-links a{color:var(--gold-soft);text-decoration:none}
 
 /* STEPS */
 .steps{list-style:none;display:grid;gap:36px;max-width:960px;margin:0 auto}
@@ -154,7 +186,9 @@ figcaption strong{font-family:var(--serif);font-weight:500;font-size:1.15rem;col
   .grid{grid-template-columns:repeat(4,1fr);gap:24px}
   .card.featured{grid-row:span 2;display:flex;flex-direction:column}
   .card.featured .frame{aspect-ratio:auto;flex:1;min-height:0}
-  .prices{grid-template-columns:repeat(4,1fr)}
+  .prices{grid-template-columns:repeat(3,1fr);max-width:1000px;margin:0 auto}
+  .usps{grid-template-columns:repeat(3,1fr)}
+  .facts{grid-template-columns:repeat(2,1fr);max-width:820px}
   .steps{grid-template-columns:repeat(3,1fr)}
   .section{padding:120px var(--pad)}
   .more-work{padding-top:80px;padding-bottom:80px}
