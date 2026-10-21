@@ -189,7 +189,7 @@ figcaption strong{font-family:var(--serif);font-weight:500;font-size:1.15rem;col
   .cta-row{flex-direction:row;justify-content:flex-start}
   .phone{width:330px}
   .grid{grid-template-columns:repeat(4,1fr);gap:24px}
-  .grid.brands{grid-template-columns:repeat(5,1fr);gap:20px}
+  .grid.brands{grid-template-columns:repeat(4,1fr);gap:20px}
   .brands .card-lead{grid-column:auto}
   .card.featured{grid-row:span 2;display:flex;flex-direction:column}
   .card.featured .frame{aspect-ratio:auto;flex:1;min-height:0}
