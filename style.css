@@ -99,6 +99,9 @@ figcaption strong{font-family:var(--serif);font-weight:500;font-size:1.15rem;col
 /* Brand ads: first tile (VEEN) spans the full row on mobile so 5 tiles read 1 + 2 + 2, no orphan; 5 columns on desktop */
 .brands .card-lead{grid-column:1/-1}
 
+/* SHORT FILMS: single centered tile */
+.grid.shorts-grid{grid-template-columns:minmax(0,300px);justify-content:center}
+
 /* MUSIC VIDEOS */
 .music{position:relative;isolation:isolate}
 .music::before{content:'';position:absolute;inset:24px 0;z-index:-1;border-radius:28px;
@@ -189,7 +192,8 @@ figcaption strong{font-family:var(--serif);font-weight:500;font-size:1.15rem;col
   .cta-row{flex-direction:row;justify-content:flex-start}
   .phone{width:330px}
   .grid{grid-template-columns:repeat(4,1fr);gap:24px}
-  .grid.brands{grid-template-columns:repeat(4,1fr);gap:20px}
+  .grid.brands{grid-template-columns:repeat(5,1fr);gap:20px}
+  .grid.shorts-grid{grid-template-columns:minmax(0,300px)}
   .brands .card-lead{grid-column:auto}
   .card.featured{grid-row:span 2;display:flex;flex-direction:column}
   .card.featured .frame{aspect-ratio:auto;flex:1;min-height:0}
