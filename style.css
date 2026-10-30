@@ -193,7 +193,7 @@ figcaption strong{font-family:var(--serif);font-weight:500;font-size:1.15rem;col
   .cta-row{flex-direction:row;justify-content:flex-start}
   .phone{width:330px}
   .grid{grid-template-columns:repeat(4,1fr);gap:24px}
-  .grid.brands{grid-template-columns:repeat(auto-fit,minmax(200px,260px));justify-content:center;gap:24px}
+  .grid.brands{grid-template-columns:repeat(auto-fit,minmax(0,240px));justify-content:center;gap:24px}
   .grid.shorts-grid{grid-template-columns:minmax(0,300px)}
   .brands .card-lead{grid-column:auto}
   /* Music videos: featured tile (Kojo) first, plus 2 tiles, one even row of 3 */
