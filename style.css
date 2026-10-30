@@ -96,8 +96,9 @@ figcaption strong{font-family:var(--serif);font-weight:500;font-size:1.15rem;col
 .brands .spec-note{font-size:.75rem;color:var(--muted)}
 .frame.has-controls{cursor:default}
 .frame.has-controls::after{display:none}
-/* Brand ads: first tile (VEEN) spans the full row on mobile so 5 tiles read 1 + 2 + 2, no orphan; 5 columns on desktop */
+/* Brand ads: first tile (VEEN) spans the full row on mobile only when the tile count is odd (1 + 2 + 2), so an even count reads 2 + 2 with no orphan. Desktop: centered columns that fit 2 to 5 tiles. */
 .brands .card-lead{grid-column:1/-1}
+.brands .card-lead:nth-last-child(even){grid-column:auto}
 
 /* SHORT FILMS: single centered tile */
 .grid.shorts-grid{grid-template-columns:minmax(0,300px);justify-content:center}
@@ -192,11 +193,13 @@ figcaption strong{font-family:var(--serif);font-weight:500;font-size:1.15rem;col
   .cta-row{flex-direction:row;justify-content:flex-start}
   .phone{width:330px}
   .grid{grid-template-columns:repeat(4,1fr);gap:24px}
-  .grid.brands{grid-template-columns:repeat(5,1fr);gap:20px}
+  .grid.brands{grid-template-columns:repeat(auto-fit,minmax(200px,260px));justify-content:center;gap:24px}
   .grid.shorts-grid{grid-template-columns:minmax(0,300px)}
   .brands .card-lead{grid-column:auto}
-  .card.featured{grid-row:span 2;display:flex;flex-direction:column}
-  .card.featured .frame{aspect-ratio:auto;flex:1;min-height:0}
+  /* Music videos: featured tile (Kojo) first, plus 2 tiles, one even row of 3 */
+  .grid.music-grid{grid-template-columns:repeat(3,minmax(0,300px));justify-content:center;gap:24px}
+  .card.featured{grid-column:auto}
+  .card.featured .frame{aspect-ratio:9/16}
   .prices{grid-template-columns:repeat(3,1fr);max-width:1000px;margin:0 auto}
   .usps{grid-template-columns:repeat(3,1fr)}
   .facts{grid-template-columns:repeat(2,1fr);max-width:820px}
