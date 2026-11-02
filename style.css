@@ -209,3 +209,12 @@ figcaption strong{font-family:var(--serif);font-weight:500;font-size:1.15rem;col
   .cta-row.cta-center{justify-content:center}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important;animation:none!important}}
+
+/* Founding brand partners (replaces pricing, 2 Nov 2026) */
+.anchor-alias{display:block;position:relative;top:-80px;visibility:hidden}
+.founding-card{position:relative;max-width:720px;margin:0 auto;padding:44px clamp(24px,5vw,56px) 40px;text-align:center;
+  border-radius:var(--r);border:1px solid rgba(233,185,73,.55);box-shadow:0 0 50px rgba(233,185,73,.1);
+  background:linear-gradient(180deg,rgba(42,19,71,.55),rgba(22,11,38,.6))}
+.founding-card .badge{left:50%;right:auto;transform:translateX(-50%);white-space:nowrap}
+.founding-body{color:var(--text);font-size:1.05rem;max-width:54ch;margin:0 auto}
+.founding-card .note{margin:22px 0 28px}
